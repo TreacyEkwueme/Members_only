@@ -1,0 +1,8 @@
+<h1>Welcome to Rails Auth App</h1>
+
+<% if user_signed_in? %>
+  <p>Hello, <%= current_user.name %>! You are successfully logged in.</p>
+  <p><%= link_to "View Your Profile", user_path(current_user) %></p>
+<% else %>
+  <p>Please <%= link_to "sign up", new_user_registration_path %> or <%= link_to "log in", new_user_session_path %> to get started.</p>
+<% end %>
